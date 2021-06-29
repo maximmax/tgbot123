@@ -47,7 +47,7 @@ my_channels = []
 
 for _ in range(my_channels_len):
     my_channels.append(dialogs[int(input("Введите номер канала для перессылки: "))])
-
+print(bad_words)
 
 @client.on(events.NewMessage(chats=channels))
 async def handler_first(event):
