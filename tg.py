@@ -51,21 +51,16 @@ for _ in range(my_channels_len):
 
 @client.on(events.NewMessage(chats=channels))
 async def handler_first(event):
+    print(event.message.text)
+
+    if event.message.text == "":
+        return
+
     print("New message")
     for word in bad_words:
         if word in event.message.text:
             print(f"Bad word is {word}")
             return
-
-    print("No bad words")
-    good_words_counter = 0
-    for word in good_words:
-        if word in event.message.text:
-            print("+1")
-            good_words_counter += 1
-    print(good_words_counter)
-    if good_words_counter == 0:
-        return
 
     for set_change in to_change:
         if set_change[0] in event.message.text:
