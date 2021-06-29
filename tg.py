@@ -47,6 +47,12 @@ my_channels = []
 
 for _ in range(my_channels_len):
     my_channels.append(dialogs[int(input("Введите номер канала для перессылки: "))])
+print("Работает...")
+
+for i in bad_words:
+    if i == "":
+        bad_words.pop(bad_words.index(i))
+        
 print(bad_words)
 
 @client.on(events.NewMessage(chats=channels))
