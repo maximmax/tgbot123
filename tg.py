@@ -57,7 +57,7 @@ for i in good_words:
         good_words.pop(good_words.index(i))
 
 for i in to_change:
-    if i == "":
+    if i == [""]:
         to_change.pop(to_change.index(i))
 
 print(bad_words)
