@@ -52,7 +52,7 @@ print("Работает...")
 for i in bad_words:
     if i == "":
         bad_words.pop(bad_words.index(i))
- for i in good_words:
+for i in good_words:
     if i == "":
         good_words.pop(good_words.index(i))
 
