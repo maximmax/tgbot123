@@ -52,7 +52,17 @@ print("Работает...")
 for i in bad_words:
     if i == "":
         bad_words.pop(bad_words.index(i))
-        
+ for i in good_words:
+    if i == "":
+        good_words.pop(good_words.index(i))
+
+for i in to_change:
+    if i == "":
+        to_change.pop(to_change.index(i))
+
+print(bad_words)
+print(good_words)
+print(to_change)       
 print(bad_words)
 
 @client.on(events.NewMessage(chats=channels))
